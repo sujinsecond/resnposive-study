@@ -1,0 +1,31 @@
+.pipe-type1 {
+  --width: 1px;
+  --height: 1.6rem;
+  --marginX: 2rem;
+  --bg: var(--gray300);
+  /* --bg: light-dark(var(--gray90), var(--gray650)); */
+  /* light-dark(var(--gray90), var(--gray650)) */
+  @media (width < 885px) {
+    --width: 0.2rem;
+    --height: 2.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+[class*='pipe-'] {
+  display: inline-flex;
+  align-items: center;
+  > * {
+    display: flex;
+    align-items: center;
+    + * {
+      &::before {
+        content: '';
+        width: var(--width);
+        height: var(--height);
+        margin-inline: var(--marginX);
+        background: var(--bg);
+      }
+    }
+  }
+}

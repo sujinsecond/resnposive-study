@@ -1,0 +1,45 @@
+.login {
+  width: 39rem;
+  margin-inline: auto;
+  text-align: center;
+  @media (width < 885px) {
+    width: 100%;
+    padding-inline: 6rem;
+    box-sizing: border-box;
+
+    .text-xxxl {
+      --fs: 4.6rem;
+    }
+    .text-xxxs {
+      --fs: 2.2rem;
+      /* color: red; */
+    }
+  }
+  .text-field {
+    --width: 100%;
+    @media (width < 885px) {
+      --height: 10rem;
+      --fontSize: 2.8rem;
+      &::placeholder {
+        font-size: 2.8rem;
+      }
+    }
+  }
+  .checkbox {
+    @media (width < 885px) {
+      --fontSize: 2.6rem;
+      --height: 4rem;
+      --pl: 5.2rem;
+    }
+  }
+  .mt20 {
+    @media (width < 885px) {
+      /* margin-top: 3rem !important; */
+      margin-top: 3rem !important;
+    }
+  }
+}
+
+.login-wrap {
+  display: grid;
+}
